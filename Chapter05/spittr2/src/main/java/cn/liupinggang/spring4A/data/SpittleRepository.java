@@ -1,9 +1,17 @@
 package cn.liupinggang.spring4A.data;
 
 
+import cn.liupinggang.spring4A.entity.Spittle;
+
 import java.util.List;
 
 public interface SpittleRepository {
 
-    List<>
+    List<Spittle> findRecentSpittles();
+
+    List<Spittle> findSpittles(long max, int count);
+
+    Spittle findOne(long id);
+
+    void save(Spittle spittle);
 }
